@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import './cube-ui'
 import App from './App.vue'
+import './cube-ui'
 
 Vue.config.productionTip = false
 
