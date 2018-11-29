@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" @click="showDetail">
     <div class="content-wrapper">
       <div class="avatar">
         <img width="64" height="64" :src="seller.avatar">
@@ -43,6 +43,16 @@
         default () {
           return {}
         }
+      }
+    },
+    methods: {
+      showDetail() {
+        this.headerDetailComp = this.headerDetailComp || this.$createHeaderDetail({
+          $props: {
+            seller: 'seller'
+          }
+        })
+        this.headerDetailComp.show()
       }
     },
     components: {
@@ -99,6 +109,7 @@
           .text
             line-height: 12px
             font-size: $fontsize-small-s
+
       .support-count
         position: absolute
         right: 12px
@@ -117,6 +128,7 @@
           margin-left: 2px
           line-height: 24px
           font-size: $fontsize-small-s
+
     .bulletin-wrapper
       position: relative
       display: flex

@@ -7,15 +7,13 @@
 <script type="text/ecmascript-6">
   import { getSeller } from 'api'
   import VHeader from 'components/v-header/v-header'
+  import HeaderDetail from 'components/header-detail/header-detail'
 
   export default {
     data () {
       return {
         seller: {}
       }
-    },
-    components: {
-      VHeader
     },
     created () {
       this._getSeller()
@@ -26,6 +24,10 @@
           this.seller = seller
         })
       }
+    },
+    components: {
+      VHeader,
+      HeaderDetail
     }
   }
 </script>
