@@ -6,11 +6,11 @@
 </template>
 
 <script>
-  import {getSeller} from 'api'
-  import VHeader from "components/v-header/v-header"
+  import { getSeller } from 'api'
+  import VHeader from 'components/v-header/v-header'
 
   export default {
-    name: "app",
+    name: 'app',
     data() {
       return {
         seller: {}

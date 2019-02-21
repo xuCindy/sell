@@ -1,6 +1,6 @@
 <template>
   <div class="header" @click="showDetail">
-     <div class="content-wrapper">
+    <div class="content-wrapper">
       <div class="avatar">
         <img width="64" height="64" :src="seller.avatar">
       </div>
